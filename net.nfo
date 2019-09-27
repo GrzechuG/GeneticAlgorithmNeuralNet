@@ -1,0 +1,5 @@
+Inputs: 5
+Outputs: 5
+Weights: 60
+Hidden layers: [6]
+WeightsFile:./weights.csv

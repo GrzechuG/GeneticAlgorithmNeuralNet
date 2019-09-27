@@ -1,0 +1,5 @@
+net.conf
+Inputs: 5
+Outputs: 5
+Hidden layers: [6]
+Population_size: 1000
