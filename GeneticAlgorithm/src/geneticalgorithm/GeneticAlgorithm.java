@@ -63,10 +63,10 @@ public class GeneticAlgorithm {
             String content = loadFile(loc);
             String[] lines = content.split("\n");
             String[] test = lines[0].split(": ");
-            inputs_num = Integer.parseInt(test[1]);
-            outputs_num = Integer.parseInt(lines[1].split(": ")[1]);
+            inputs_num = Integer.parseInt(test[1].replace(" ",""));
+            outputs_num = Integer.parseInt(lines[1].split(": ")[1].replace(" ",""));
            if(!lines[2].split(": ")[1].equals("[]")){
-            String values[] = (lines[2].split(": ")[1]).replace("[", "").replace("]", "").split(",");
+            String values[] = (lines[2].split(": ")[1]).replace("[", "").replace("]", "").replace(" ","").split(",");
             
             int[] parsed = new int[values.length];
             for (int i = 0; i < values.length; i++) {
@@ -162,10 +162,10 @@ public class GeneticAlgorithm {
         String content = loadFile(loc);
         String[] lines = content.split("\n");
         String[] test = lines[0].split(": ");
-        inputs_num = Integer.parseInt(test[1]);
-        outputs_num = Integer.parseInt(lines[1].split(": ")[1]);
-        weights_num = Integer.parseInt(lines[2].split(": ")[1]);
-        String values[] = (lines[3].split(": ")[1]).replace("[", "").replace("]", "").split(",");
+        inputs_num = Integer.parseInt(test[1].replace(" ",""));
+        outputs_num = Integer.parseInt(lines[1].split(": ")[1].replace(" ",""));
+        weights_num = Integer.parseInt(lines[2].split(": ")[1].replace(" ",""));
+        String values[] = (lines[3].split(": ")[1]).replace("[", "").replace("]", "").replace(" ","").split(",");
         int[] parsed = new int[values.length];
         for (int i = 0; i < values.length; i++) {
             parsed[i] = Integer.parseInt(values[i]);
